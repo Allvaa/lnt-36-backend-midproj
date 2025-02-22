@@ -12,7 +12,7 @@ return new class extends Migration {
             $table->string('name', 20);
             $table->integer('age')->check('age > 20');
             $table->string('address', 40);
-            $table->string('phone', 12)->unique();
+            $table->string('phone', 12);
             $table->timestamps();
         });
     }
