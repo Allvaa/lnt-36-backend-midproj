@@ -19,5 +19,5 @@
         <label>Phone</label>
         <input type="text" name="phone" class="form-control" value="{{ $employee?->phone ?? '' }}" required>
     </div>
-    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-primary">{{ isset($employee) ? 'Update' : 'Save'}}</button>
 </form>
