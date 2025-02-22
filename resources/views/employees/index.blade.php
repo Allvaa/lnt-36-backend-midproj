@@ -3,7 +3,7 @@
 @section('title', 'Employee Management')
 
 @section('content')
-    <div class="container">
+    <div>
         <h2 class="mb-4">Employee Management</h2>
         
         <table class="table table-bordered">
@@ -40,13 +40,5 @@
 
         <a href="{{ route('employees.create') }}" class="btn btn-success">Add Employee</a>
     </div>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <x-form-error />
 @endsection
